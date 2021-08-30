@@ -1,0 +1,136 @@
+https://docs.aws.amazon.com/iam/?id=docs_gateway
+# for mac https://awscli.amazonaws.com/AWSCLIV2.pkg
+# for windwo https://awscli.amazonaws.com/AWSCLIV2.msi
+
+
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
+
+    <title>BT4221 AWS Practice</title>
+
+    <!-- style -->
+    <style type="text/css">
+        * {
+            font-family: 'Stylish', sans-serif;
+        }
+
+        .wrap {
+            width: 900px;
+            margin: auto;
+        }
+
+        .comment {
+            color: blue;
+            font-weight: bold;
+        }
+
+        #post-box {
+            width: 500px;
+            margin: 20px auto;
+            padding: 50px;
+            border: black solid;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function save() {
+            var form_data = new FormData($('#upload-file')[0]);
+            $.ajax({
+                type: 'POST',
+                url: '/fileupload',
+                data: form_data,
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    alert("Your file is uploaded!!");
+                },
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+<div class="wrap">
+    <div class="jumbotron">
+        <h1 class="display-4"> Note for BT4221!</h1>
+        <p class="lead">Save Images And See</p>
+        <hr class="my-4">
+    </div>
+    <div id="post-box" class="form-post">
+        <div>
+            <div class="form-group">
+                <form id="upload-file">
+                    <label for="post-url">Image File</label>
+                    <input type="file" name="file"/>
+                </form>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="save()">Save</button>
+        </div>
+    </div>
+    <div id="cards-box" class="card-columns">
+        <div class="card">
+            <img class="card-img-top"
+                 src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <a href="#" class="card-title">BT4221 Note</a>
+                <p class="card-text">BT4221 Contents.</p>
+                <p class="card-text comment">Brief Summary.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top"
+                 src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <a href="#" class="card-title">BT4221 Note</a>
+                <p class="card-text">BT4221 Contents.</p>
+                <p class="card-text comment">Brief Summary.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top"
+                 src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <a href="#" class="card-title">BT4221 Note</a>
+                <p class="card-text">BT4221 Contents.</p>
+                <p class="card-text comment">Brief Summary.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top"
+                 src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
+                 alt="Card image cap">
+            <div class="card-body">
+                <a href="#" class="card-title">BT4221 Note</a>
+                <p class="card-text">BT4221 Contents.</p>
+                <p class="card-text comment">Brief Summary.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
